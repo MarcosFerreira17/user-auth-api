@@ -18,28 +18,35 @@ public class UserService implements IUserService{
     private final RoleRepository roleRepository;
     @Override
     public AppUser saveUser(AppUser user) {
+        log.info("saving new user to database, id: {}", user.getId());
         return userRepository.save(user);
     }
 
     @Override
     public Role saveRole(Role role) {
+        log.info("saving new role to database, name: {}", role.getName());
         return roleRepository.save(role);
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) {
-    var user = userRepository.findByUsername(username);
-    var role = roleRepository.findByName(roleName);
-    user.getRoles().add(role);
+        log.info("find user by username: {}", username);
+        var user = userRepository.findByUsername(username);
+        log.info("find role by name: {}", roleName);
+        var role = roleRepository.findByName(roleName);
+        log.info("add role to user");
+        user.getRoles().add(role);
     }
 
     @Override
     public AppUser getUser(String username) {
+        log.info("find user by username: {}", username);
         return userRepository.findByUsername(username);
     }
 
     @Override
     public List<AppUser> getUsers() {
+        log.info("find all users");
         return userRepository.findAll();
     }
 }
