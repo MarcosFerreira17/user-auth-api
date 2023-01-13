@@ -7,7 +7,6 @@ import io.gearrays.userservice.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class UserService implements IUserService{
         var user = userRepository.findByUsername(username);
         log.info("find role by name: {}", roleName);
         var role = roleRepository.findByName(roleName);
-        log.info("add role to user");
+        log.info("Adding role {} to user {}", roleName, username);
         user.getRoles().add(role);
     }
 
