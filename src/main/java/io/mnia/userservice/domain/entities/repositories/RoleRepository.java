@@ -1,6 +1,6 @@
-package io.gearrays.userservice.domain.entities.repositories;
+package io.mnia.userservice.domain.entities.repositories;
 
-import io.gearrays.userservice.domain.entities.Role;
+import io.mnia.userservice.domain.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {

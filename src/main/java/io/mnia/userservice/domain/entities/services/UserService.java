@@ -1,9 +1,9 @@
-package io.gearrays.userservice.domain.entities.services;
+package io.mnia.userservice.domain.entities.services;
 
-import io.gearrays.userservice.domain.entities.AppUser;
-import io.gearrays.userservice.domain.entities.Role;
-import io.gearrays.userservice.domain.entities.repositories.RoleRepository;
-import io.gearrays.userservice.domain.entities.repositories.UserRepository;
+import io.mnia.userservice.domain.entities.AppUser;
+import io.mnia.userservice.domain.entities.Role;
+import io.mnia.userservice.domain.entities.repositories.RoleRepository;
+import io.mnia.userservice.domain.entities.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -11,17 +11,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-@Service @RequiredArgsConstructor @Transactional @Slf4j
-public class UserService implements IUserService, UserDetailsService
-{
+@Service
+@RequiredArgsConstructor
+@Transactional
+@Slf4j
+public class UserService implements IUserService, UserDetailsService {
 
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
+
     @Override
     public AppUser saveUser(AppUser user) {
         log.info("saving new user to database, id: {}", user.getId());
@@ -59,7 +63,7 @@ public class UserService implements IUserService, UserDetailsService
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         AppUser user = userRepository.findByUsername(username);
-        if (user == null){
+        if (user == null) {
             log.error("User not found in the database.");
             throw new UsernameNotFoundException("User not found in the database.");
         }

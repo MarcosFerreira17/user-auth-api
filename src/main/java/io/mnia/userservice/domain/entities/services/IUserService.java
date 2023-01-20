@@ -1,14 +1,18 @@
-package io.gearrays.userservice.domain.entities.services;
+package io.mnia.userservice.domain.entities.services;
 
-import io.gearrays.userservice.domain.entities.AppUser;
-import io.gearrays.userservice.domain.entities.Role;
+import io.mnia.userservice.domain.entities.AppUser;
+import io.mnia.userservice.domain.entities.Role;
 
 import java.util.List;
 
 public interface IUserService {
     AppUser saveUser(AppUser user);
+
     Role saveRole(Role role);
+
     void addRoleToUser(String username, String role);
+
     AppUser getUser(String username);
+
     List<AppUser> getUsers();
 }
