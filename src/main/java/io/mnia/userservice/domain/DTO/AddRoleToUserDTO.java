@@ -1,4 +1,4 @@
-package io.mnia.userservice.domain.entities.DTO;
+package io.mnia.userservice.domain.DTO;
 
 import lombok.Data;
 

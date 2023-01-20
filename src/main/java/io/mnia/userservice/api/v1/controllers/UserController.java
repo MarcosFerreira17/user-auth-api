@@ -3,7 +3,7 @@ package io.mnia.userservice.api.v1.controllers;
 import io.mnia.userservice.domain.entities.AppUser;
 import io.mnia.userservice.domain.entities.DTO.AddRoleToUserDTO;
 import io.mnia.userservice.domain.entities.Role;
-import io.mnia.userservice.domain.entities.services.UserService;
+import io.mnia.userservice.domain.services.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

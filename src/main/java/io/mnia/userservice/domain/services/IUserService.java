@@ -1,4 +1,4 @@
-package io.mnia.userservice.domain.entities.services;
+package io.mnia.userservice.domain.services;
 
 import io.mnia.userservice.domain.entities.AppUser;
 import io.mnia.userservice.domain.entities.Role;

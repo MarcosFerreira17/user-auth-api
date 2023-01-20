@@ -1,9 +1,9 @@
-package io.mnia.userservice.domain.entities.services;
+package io.mnia.userservice.domain.services;
 
 import io.mnia.userservice.domain.entities.AppUser;
 import io.mnia.userservice.domain.entities.Role;
-import io.mnia.userservice.domain.entities.repositories.RoleRepository;
-import io.mnia.userservice.domain.entities.repositories.UserRepository;
+import io.mnia.userservice.domain.repositories.RoleRepository;
+import io.mnia.userservice.domain.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

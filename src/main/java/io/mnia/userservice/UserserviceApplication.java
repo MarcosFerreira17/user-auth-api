@@ -2,7 +2,7 @@ package io.mnia.userservice;
 
 import io.mnia.userservice.domain.entities.AppUser;
 import io.mnia.userservice.domain.entities.Role;
-import io.mnia.userservice.domain.entities.services.UserService;
+import io.mnia.userservice.domain.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

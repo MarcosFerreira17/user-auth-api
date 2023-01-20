@@ -1,4 +1,4 @@
-package io.mnia.userservice.domain.entities.repositories;
+package io.mnia.userservice.domain.repositories;
 
 import io.mnia.userservice.domain.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
