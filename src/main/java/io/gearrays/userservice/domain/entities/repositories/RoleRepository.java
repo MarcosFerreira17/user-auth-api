@@ -1,4 +1,4 @@
-package io.gearrays.userservice.repositories;
+package io.gearrays.userservice.domain.entities.repositories;
 
 import io.gearrays.userservice.domain.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;

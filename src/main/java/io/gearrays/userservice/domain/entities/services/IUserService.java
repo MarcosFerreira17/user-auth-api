@@ -1,4 +1,4 @@
-package io.gearrays.userservice.services;
+package io.gearrays.userservice.domain.entities.services;
 
 import io.gearrays.userservice.domain.entities.AppUser;
 import io.gearrays.userservice.domain.entities.Role;
