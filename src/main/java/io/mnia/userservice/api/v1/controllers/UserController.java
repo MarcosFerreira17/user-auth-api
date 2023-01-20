@@ -1,7 +1,7 @@
 package io.mnia.userservice.api.v1.controllers;
 
 import io.mnia.userservice.domain.entities.AppUser;
-import io.mnia.userservice.domain.entities.DTO.AddRoleToUserDTO;
+import io.mnia.userservice.domain.DTO.AddRoleToUserDTO;
 import io.mnia.userservice.domain.entities.Role;
 import io.mnia.userservice.domain.services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -23,11 +23,6 @@ public class UserController {
     @GetMapping("/users")
     public ResponseEntity<List<AppUser>> getUsers() {
         return ResponseEntity.ok().body(userService.getUsers());
-    }
-
-    @PostMapping("/users")
-    public ResponseEntity<AppUser> getUsers(@RequestBody AppUser user) {
-        return ResponseEntity.ok().body(userService.saveUser(user));
     }
 
     @PostMapping("/user")
